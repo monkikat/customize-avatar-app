@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body {
+    color: var(--color-espresso-600);
+    background-color: var(--color-creme-200);
+}
+
+@theme {
+    --color-creme-200: #fff4e4;
+    --color-pinky-200: #df8eb9;
+    --color-espresso-600: #3e2722;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
