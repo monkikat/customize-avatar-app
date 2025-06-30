@@ -24,7 +24,7 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
   const jacketAsset = avatarState.jacket ? getAssetItem('jackets', avatarState.jacket) : null;
 
   return (
-    <div className="h-full w-fit flex items-center justify-center relative">
+    <div className="h-full w-fit flex items-center justify-center relative scale-70 lg:scale-100 sm:scale-90">
       <img src={avatar} className="h-3/4" alt="Avatar base" />
       
       {/* Top positioned absolutely on top of avatar */}
