@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+# Avatar Customization App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun little web app where you can dress up your avatar with different outfits and accessories. 
 
-Currently, two official plugins are available:
+Visit live app at https://customize-avatar-app-o7pf.vercel.app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it does
 
-## Expanding the ESLint configuration
+- Start with a basic avatar
+- Mix and match tops, bottoms, jackets, and accessories
+- See your changes in real-time
+- Clean, simple interface that's easy to use
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech stuff
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** with TypeScript
+- **Vite** for fast development
+- **Tailwind CSS** for styling
+- **Framer Motion** for smooth animations
+- **React Router** for navigation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone it
+git clone <your-repo-url>
+cd customize-avatar-app
+
+# Install dependencies
+npm install
+
+# Run it locally
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open your browser to `http://localhost:5173` and start customizing!
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available commands
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Check for code issues
 ```
+
+## Project structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Main app pages
+├── assets/        # Images and clothing items
+├── types/         # TypeScript type definitions
+└── utils/         # Helper functions
+```
+
+## Features
+
+- **Landing page** - Welcome screen with profile rotation
+- **Customization page** - Main interface for dressing up your avatar
+- **Responsive design** - Works on different screen sizes
+- **Smooth animations** - Thanks to Framer Motion
+- **Type safety** - Full TypeScript support
+
+## Assets
+
+All clothing items and accessories are organized by category:
+- Tops
+- Bottoms  
+- Outerwear/Jackets
+- Shoes
+- Accessories
+
+## Contributing
+
+Feel free to fork this and make it your own! If you add cool features or fix bugs, pull requests are welcome.
+
+## License
+
+MIT - do whatever you want with it
