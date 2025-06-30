@@ -7,10 +7,10 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen w-full bg-[conic-gradient(var(--color-creme-200)_90deg,var(--color-pinky-200)_90deg_180deg,var(--color-creme-200)_180deg_270deg,var(--color-pinky-200)_270deg)] bg-[length:80px_80px] fade-in">
+    <div className="h-screen overflow-clip w-full bg-[conic-gradient(var(--color-creme-200)_90deg,var(--color-pinky-200)_90deg_180deg,var(--color-creme-200)_180deg_270deg,var(--color-pinky-200)_270deg)] bg-[length:80px_80px] fade-in">
         <div className="h-screen flex justify-between">
           <ProfileRotation/>
-          <div className="flex flex-col w-5/6 items-center justify-center space-y-24 pr-12 py-28">
+          <div className="flex flex-col w-5/6 items-center justify-center space-y-10 pr-12 py-4">
             <TitleCard/>
             <div className="flex flex-col space-y-4 items-center font-semibold text-sm">
               <button onClick={() => navigate('/customize')} className="w-fit bg-creme-200 rounded-4xl py-1 px-8 border-pinky-200 border-4 hover:cursor-pointer hover:scale-105">Play</button>

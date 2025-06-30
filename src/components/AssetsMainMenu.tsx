@@ -11,8 +11,8 @@ const AssetsMainMenu: React.FC<AssetsMainMenuProps> = ({ onItemClick }) => {
 
   return (
     <div className="w-2/5 translate-x-20 h-full flex items-center justify-center">
-        <div className="w-8/9 rounded-2xl border-espresso-600 border-2 h-3/4 flex">
-          <ul className="h-full bg-creme-200 w-2/7 text-sm border-r-2">
+        <div className="w-8/9 rounded-2xl bg-espresso-600 border-espresso-600 border-2 h-3/4 flex">
+          <ul className="h-full w-2/7 bg-creme-200 text-sm border-r-2">
             <li 
               className={`border-b-2 border-espresso-600 px-4 py-2 hover:cursor-pointer hover:bg-pinky-200 ${selectedCategory === 'tops' ? 'bg-pinky-200' : ''}`}
               onClick={() => setSelectedCategory("tops")}
@@ -26,10 +26,16 @@ const AssetsMainMenu: React.FC<AssetsMainMenuProps> = ({ onItemClick }) => {
               Bottoms
             </li>
             <li 
-              className={`border-b-2 border-espresso-600 px-4 py-2 hover:cursor-pointer hover:bg-pinky-200 ${selectedCategory === 'shoes' ? 'bg-pinky-200' : ''}`}
-              onClick={() => setSelectedCategory("shoes")}
+              className={`border-b-2 border-espresso-600 px-4 py-2 hover:cursor-pointer hover:bg-pinky-200 ${selectedCategory === 'accessories' ? 'bg-pinky-200' : ''}`}
+              onClick={() => setSelectedCategory("accessories")}
             >
-              Shoes
+              Accessories
+            </li>
+            <li 
+              className={`px-4 py-2 hover:cursor-pointer hover:bg-pinky-200 border-b-2 border-espresso-600 ${selectedCategory === 'jackets' ? 'bg-pinky-200' : ''}`}
+              onClick={() => setSelectedCategory("jackets")}
+            >
+              Jackets
             </li>
           </ul>
           <AssetsItems category={selectedCategory} onItemClick={onItemClick} />

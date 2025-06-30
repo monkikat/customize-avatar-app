@@ -16,14 +16,15 @@ const CustomizePage = () => {
 
   const handleItemClick = (itemType: keyof AvatarState) => {
     console.log(`Clicked on ${itemType}`);
-    // Future: Open menu to select different items
+    setIsClosetOpen(true);
   };
 
   const handleAssetSelection = (category: string, asset: string) => {
     const propertyMap: { [key: string]: string } = {
       'tops': 'top',
       'bottoms': 'bottom',
-      'shoes': 'shoes'
+      'accessories': 'accessories',
+      'jackets': 'jacket'
     };
     
     const avatarProperty = propertyMap[category] || category;

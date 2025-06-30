@@ -35,7 +35,7 @@ const TitleCard = () => {
     return rotations[index] ? "rotate-[-10deg]" : "rotate-[10deg]";
   };
   return (
-    <div className="h-fit w-full space-y-24 text-center flex flex-col items-center">
+    <div className="h-fit w-full space-y-12 text-center flex flex-col items-center">
         <div className="text-sm font-semibold bg-creme-200 rounded-4xl py-1 px-12 border-pinky-200 border-4">
             <p>monkikat presents</p>
         </div>

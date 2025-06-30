@@ -4,7 +4,7 @@ import CustomizePage from "./pages/CustomizePage"
 
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="h-screen">
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />

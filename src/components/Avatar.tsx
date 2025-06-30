@@ -1,6 +1,8 @@
 import React from "react";
 import avatar from "../assets/avatar.png";
+import shoes1 from "../assets/shoes/3dcc6ca4afcc15d225c567a53ef3fbc9.png";
 import type { AvatarState } from "../types/avatar";
+import { getAssetItem } from "../utils/assetImports";
 
 interface AvatarProps {
   avatarState: AvatarState;
@@ -15,6 +17,12 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
     console.log(`${itemType} clicked`);
   };
 
+  // Get asset items with their custom styling
+  const topAsset = getAssetItem('tops', avatarState.top);
+  const bottomAsset = getAssetItem('bottoms', avatarState.bottom);
+  const accessoriesAsset = avatarState.accessories ? getAssetItem('accessories', avatarState.accessories) : null;
+  const jacketAsset = avatarState.jacket ? getAssetItem('jackets', avatarState.jacket) : null;
+
   return (
     <div className="h-full w-fit flex items-center justify-center relative">
       <img src={avatar} className="h-3/4" alt="Avatar base" />
@@ -22,7 +30,7 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
       {/* Top positioned absolutely on top of avatar */}
       <img 
         src={avatarState.top}
-        className="absolute h-2/11 hover:cursor-pointer -translate-y-7/8 hover:scale-105 z-10"
+        className={topAsset?.className || "absolute h-2/11 hover:cursor-pointer -translate-y-7/8 hover:scale-105 z-10"}
         onClick={() => handleItemClick('top')}
         alt="Top"
       />
@@ -31,7 +39,7 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
       {avatarState.jacket && (
         <img 
           src={avatarState.jacket}
-          className="absolute h-2/10 hover:cursor-pointer hover:scale-105 z-15"
+          className={jacketAsset?.className || "absolute h-2/10 hover:cursor-pointer hover:scale-105 z-15"}
           onClick={() => handleItemClick('jacket')}
           alt="Jacket"
         />
@@ -40,16 +48,15 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
       {/* Bottom positioned absolutely on top of avatar */}
       <img 
         src={avatarState.bottom}
-        className="absolute w-3/4 translate-y-1/3 translate-x-1 hover:cursor-pointer hover:scale-105 z-0"
+        className={bottomAsset?.className || "absolute w-3/4 translate-y-1/3 translate-x-1 hover:cursor-pointer hover:scale-105 z-0"}
         onClick={() => handleItemClick('bottom')}
         alt="Bottom"
       />
       
-      {/* Shoes positioned absolutely */}
+      {/* Shoes positioned absolutely - permanent default */}
       <img 
-        src={avatarState.shoes}
+        src={shoes1}
         className="absolute w-1/2 hover:cursor-pointer translate-x-1 translate-y-5/9 hover:scale-105 -z-10"
-        onClick={() => handleItemClick('shoes')}
         alt="Shoes"
       />
       
@@ -57,7 +64,7 @@ const Avatar: React.FC<AvatarProps> = ({ avatarState, onItemClick }) => {
       {avatarState.accessories && (
         <img 
           src={avatarState.accessories}
-          className="absolute h-20 hover:cursor-pointer hover:scale-105 z-25"
+          className={accessoriesAsset?.className || "absolute h-20 hover:cursor-pointer hover:scale-105 z-25"}
           onClick={() => handleItemClick('accessories')}
           alt="Accessories"
         />
