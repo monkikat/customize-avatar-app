@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Avatar from "../components/Avatar";
 import { defaultAvatarState, type AvatarState } from "../types/avatar";
 import AssetsMainMenu from "../components/AssetsMainMenu";

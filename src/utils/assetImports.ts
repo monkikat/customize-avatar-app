@@ -17,10 +17,6 @@ import bottom2 from "../assets/bottoms/733a8c96d1d4e0d677c43c642a2b528e.png";
 import bottom3 from "../assets/bottoms/6901adc6549faace81f674b488e3208a.png";
 import bottom5 from "../assets/bottoms/CROPPEDf9d9feb78a70f2f5fd9ef4073b2c08b1.png";
 
-// Import all shoes
-import shoes1 from "../assets/shoes/3dcc6ca4afcc15d225c567a53ef3fbc9.png";
-import shoes2 from "../assets/shoes/8c092a505aaa946ecebb4aed8883bffe.png";
-import shoes3 from "../assets/shoes/70295472d161ca481626223344e1b679.png";
 
 // Import all accessories
 import accessory1 from "../assets/accessories/3b5a63abfffccdd2572d8a909e6f1652.png";
