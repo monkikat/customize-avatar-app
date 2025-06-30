@@ -12,7 +12,7 @@ const LandingPage = () => {
           <ProfileRotation/>
           <div className="flex flex-col w-5/6 items-center justify-center space-y-24 pr-12 py-28">
             <TitleCard/>
-            <div className="flex flex-col space-y-4 items-center font-semibold text-lg">
+            <div className="flex flex-col space-y-4 items-center font-semibold text-sm">
               <button onClick={() => navigate('/customize')} className="w-fit bg-creme-200 rounded-4xl py-1 px-8 border-pinky-200 border-4 hover:cursor-pointer hover:scale-105">Play</button>
               <div className="space-x-12 flex items-center">
                 <button className=" bg-creme-200 rounded-4xl py-1 px-2 border-pinky-200 border-4 hover:cursor-pointer hover:scale-105">

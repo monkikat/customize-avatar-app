@@ -36,7 +36,7 @@ const TitleCard = () => {
   };
   return (
     <div className="h-fit w-full space-y-24 text-center flex flex-col items-center">
-        <div className="text-lg font-semibold bg-creme-200 rounded-4xl py-1 px-12 border-pinky-200 border-4">
+        <div className="text-sm font-semibold bg-creme-200 rounded-4xl py-1 px-12 border-pinky-200 border-4">
             <p>monkikat presents</p>
         </div>
         <div className="text-6xl flex flex-col justify-center space-y-10 overflow-hidden">
